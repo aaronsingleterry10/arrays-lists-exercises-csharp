@@ -23,40 +23,46 @@ namespace ArraysListsExercise
             //user presses Enter(without supplying a name). Depending on the number of names 
             //provided, display a message based on the above pattern.
 
-            var names = new List<string>();
-            while (true)
-            {
-                Console.Write("Enter different names: ");
-                var input = Console.ReadLine();
+            //var names = new List<string>();
+            //while (true)
+            //{
+            //    Console.Write("Enter different names: ");
+            //    var input = Console.ReadLine();
 
-                if (String.IsNullOrEmpty(input))
-                {
-                    break;
-                } 
-                else
-                {
-                    names.Add(input);
-                    continue;
-                } 
-            } 
-            if (names.Count == 1)
-            {
-                Console.WriteLine(names[0] + " likes your post.");
-            } 
-            else if (names.Count == 2)
-            {
-                Console.WriteLine(names[0] + " and " + names[1] + " likes your post.");
-            }
-            else if (names.Count > 2)
-            {
-                var numOfRest = names.Count - 2;
-                Console.WriteLine(names[0] + ", " + names[1] +  " and " + numOfRest + " others like your post.");
-            }
+            //    if (String.IsNullOrEmpty(input))
+            //    {
+            //        break;
+            //    } 
+            //    else
+            //    {
+            //        names.Add(input);
+            //        continue;
+            //    } 
+            //} 
+            //if (names.Count == 1)
+            //{
+            //    Console.WriteLine(names[0] + " likes your post.");
+            //} 
+            //else if (names.Count == 2)
+            //{
+            //    Console.WriteLine(names[0] + " and " + names[1] + " likes your post.");
+            //}
+            //else if (names.Count > 2)
+            //{
+            //    var numOfRest = names.Count - 2;
+            //    Console.WriteLine(names[0] + ", " + names[1] +  " and " + numOfRest + " others like your post.");
+            //}
 
 
             //2 - Write a program and ask the user to enter their name. Use an array to reverse 
             //    the name and then store the result in a new string.Display the reversed name on the console.
 
+            //Console.Write("Enter your name: ");
+            //var input = Console.ReadLine();
+            //var inputIntoArray = input.Split();
+            //Array.Reverse(inputIntoArray);
+            //var reverseName = String.Join(" ", inputIntoArray);
+            //Console.WriteLine(reverseName);
 
 
             //3 - Write a program and ask the user to enter 5 numbers.If a number has been previously entered, 
