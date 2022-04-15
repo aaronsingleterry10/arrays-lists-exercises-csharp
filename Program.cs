@@ -74,26 +74,26 @@ namespace ArraysListsExercise
             //var numArray = input.Split(' ');
             //var newNumArray = Array.ConvertAll(numArray, int.Parse);
             //var uniqueItems = newNumArray.Distinct<int>();
-            while (true)
-            {
-                Console.Write("Enter five unique numbers: ");
-                var input = Console.ReadLine();
-                var numArray = input.Split(' ');
-                var newNumArray = Array.ConvertAll(numArray, int.Parse);
-                var uniqueItems = newNumArray.Distinct<int>();
-                if (newNumArray.Length == uniqueItems.Count())
-                {
-                    Array.Sort(newNumArray);
-                    var output = String.Join(", ", newNumArray);
-                    Console.WriteLine(output);
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Error: Unique values only.");
-                    continue;
-                }
-            }
+            //while (true)
+            //{
+            //    Console.Write("Enter five unique numbers: ");
+            //    var input = Console.ReadLine();
+            //    var numArray = input.Split(' ');
+            //    var newNumArray = Array.ConvertAll(numArray, int.Parse);
+            //    var uniqueItems = newNumArray.Distinct<int>();
+            //    if (newNumArray.Length == uniqueItems.Count())
+            //    {
+            //        Array.Sort(newNumArray);
+            //        var output = String.Join(", ", newNumArray);
+            //        Console.WriteLine(output);
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Error: Unique values only.");
+            //        continue;
+            //    }
+            //}
             //Array.Sort(newNumArray);
             //foreach (var num in newNumArray)
             //{
@@ -123,7 +123,24 @@ namespace ArraysListsExercise
             //4 - Write a program and ask the user to continuously enter a number or type "Quit" 
             //    to exit. The list of numbers may include duplicates.Display the unique numbers 
             //    that the user has entered.
-
+            var list = new List<int>();
+            while (true)
+            {
+                Console.Write("Continuosly enter numbers, or type \"Quit\" to exit. ");
+                var input = Console.ReadLine();
+                if (input.ToLower() == "quit")
+                {
+                    break;
+                }
+                else
+                {
+                    list.Add(Int32.Parse(input));
+                    continue;
+                }
+            }
+            var uniqueNums = list.Distinct<int>();
+            var output = String.Join(", ", uniqueNums);
+            Console.WriteLine(output);
 
 
             //5 - Write a program and ask the user to supply a list of comma separated numbers(e.g 5, 1, 9, 2, 10). 
