@@ -69,53 +69,26 @@ namespace ArraysListsExercise
             //    display an error message and ask the user to re-try. Once the user successfully enters 5 unique 
             //    numbers, sort them and display the result on the console.
 
-            //Console.Write("Enter five unique numbers: ");
-            //var input = Console.ReadLine();
-            //var numArray = input.Split(' ');
-            //var newNumArray = Array.ConvertAll(numArray, int.Parse);
-            //var uniqueItems = newNumArray.Distinct<int>();
-            while (true)
-            {
-                Console.Write("Enter five unique numbers: ");
-                var input = Console.ReadLine();
-                var numArray = input.Split(' ');
-                var newNumArray = Array.ConvertAll(numArray, int.Parse);
-                var uniqueItems = newNumArray.Distinct<int>();
-                if (newNumArray.Length == uniqueItems.Count())
-                {
-                    Array.Sort(newNumArray);
-                    var output = String.Join(", ", newNumArray);
-                    Console.WriteLine(output);
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Error: Unique values only.");
-                    continue;
-                }
-            }
-            //Array.Sort(newNumArray);
-            //foreach (var num in newNumArray)
+            //while (true)
             //{
-            //    Console.WriteLine(num);
-            //}
-
-            //bool hasUniqueNums = true;
-            //for (var i = 0; i < newNumArray.Length; i++)
-            //{
-            //    if (newNumArray[i] == newNumArray[i + 1])
+            //    Console.Write("Enter five unique numbers: ");
+            //    var input = Console.ReadLine();
+            //    var numArray = input.Split(' ');
+            //    var newNumArray = Array.ConvertAll(numArray, int.Parse);
+            //    var uniqueItems = newNumArray.Distinct<int>();
+            //    if (newNumArray.Length == uniqueItems.Count())
             //    {
-            //        Console.WriteLine("Error: Unique values only. Try again.");
-            //        hasUniqueNums = false;
+            //        Array.Sort(newNumArray);
+            //        var output = String.Join(", ", newNumArray);
+            //        Console.WriteLine(output);
             //        break;
             //    }
-
+            //    else
+            //    {
+            //        Console.WriteLine("Error: Unique values only.");
+            //        continue;
+            //    }
             //}
-            
-            //var output = String.Join(", ", newNumArray);
-            //Console.WriteLine(output);
-
-
 
             //4 - Write a program and ask the user to continuously enter a number or type "Quit" 
             //    to exit. The list of numbers may include duplicates.Display the unique numbers 
